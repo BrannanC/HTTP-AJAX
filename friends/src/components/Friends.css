@@ -1,0 +1,21 @@
+.FriendsList {
+    max-width: 800px;
+    text-align: left;
+    margin: 10px;
+}
+
+.FriendsList .Friend {
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.FriendsList .Friend h2 {
+    font-size: 2rem;
+    margin: 5px 0;
+    text-decoration: underline;
+}
+
+.FriendsList .Friend h4 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
