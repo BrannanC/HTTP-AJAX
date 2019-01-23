@@ -10,7 +10,8 @@ class FriendsList extends React.Component {
         friends: [],
             name: "",
             age: '',
-            email: ""
+            email: "",
+            currentIndex: ''
     }
 
     componentDidMount(){
@@ -20,6 +21,7 @@ class FriendsList extends React.Component {
             console.log(res.data);
           this.setState({
             friends: res.data,
+            currentIndex: res.data.length + 1
           });
         })
         .catch(err => {
@@ -36,12 +38,13 @@ class FriendsList extends React.Component {
     addFriend = (e) => {
         e.preventDefault();
         const { name, age, email } = this.state;
-        const id = this.state.friends.length + 1
+        const id = this.state.currentIndex;
         axios
           .post(`http://localhost:5000/friends`, { name, age, email, id})
-          .then(res => this.setState({
-              friends: res.data
-          }))
+          .then(res => this.setState(prevState => ({
+              friends: res.data,
+              currentIndex: prevState.currentIndex + 1
+          })))
           .catch(err => console.log(err));
       };
 
