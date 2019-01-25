@@ -1,0 +1,47 @@
+.FriendsList {
+    max-width: 800px;
+    text-align: left;
+    margin: 10px;
+}
+
+.FriendsList .Friend {
+    border: 1px solid lightgrey;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FriendsList .Friend h2 {
+    font-size: 2rem;
+    margin: 5px 0;
+    text-decoration: underline;
+}
+
+.FriendsList .Friend h4 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.FriendsList .Friend button {
+    font-size: 2rem;
+    opacity: .8;
+}
+
+.FriendsList .Friend button:hover {
+    opacity: 1;
+}
+
+.FriendForm {
+    background: powderblue;
+    border: 1px solid lightgray;
+    padding: 15px;
+    text-align: left;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.FriendForm input {
+    width: 70%;
+    margin-bottom: 10px;
+}
